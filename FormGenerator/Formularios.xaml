@@ -1,0 +1,34 @@
+﻿<Window x:Class="FormGenerator.Formularios"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormGenerator"
+        mc:Ignorable="d"
+        Title="Formularios" Height="470.471" Width="733.995" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="327*"/>
+            <RowDefinition Height="112*"/>
+        </Grid.RowDefinitions>
+        <ListBox Name="lstFormularios" HorizontalAlignment="Left" Height="255" SelectionChanged="lstFormularios_SelectionChanged" 
+                 Margin="29,36,0,0" VerticalAlignment="Top" Width="152" KeyboardNavigation.TabIndex="0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding nome_formulario}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Formulários Cadastrados" HorizontalAlignment="Left" Margin="24,12,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtXML" AcceptsReturn="True" HorizontalAlignment="Left" Height="246" Margin="311,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="383" KeyboardNavigation.TabIndex="5" Grid.RowSpan="2"/>
+        <Button Name="btnNovo" Content="Novo" Click="btnNovo_Click" HorizontalAlignment="Left" Margin="193,36,0,0" VerticalAlignment="Top" Width="67" KeyboardNavigation.TabIndex="1"/>
+        <Button Name="btnSalvar" Content="Salvar" Click="btnSalvar_Click" HorizontalAlignment="Left" Margin="594,50.658,0,0" VerticalAlignment="Top" Width="89" Height="25" KeyboardNavigation.TabIndex="7" Grid.Row="1"/>
+        <TextBox Name="txtNomeFormulario" HorizontalAlignment="Left" Height="22" Margin="311,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" KeyboardNavigation.TabIndex="4"/>
+        <Label Content="Nome do Formulário" HorizontalAlignment="Left" Margin="306,30,0,0" VerticalAlignment="Top"/>
+        <Label Content="XML do Formulário" HorizontalAlignment="Left" Margin="306,84,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEditar" Content="Editar" Click="btnEditar_Click" HorizontalAlignment="Left" Margin="193,69,0,0" VerticalAlignment="Top" Width="67" KeyboardNavigation.TabIndex="2"/>
+        <Button x:Name="btnExcluir" Content="Excluir" Click="btnExcluir_Click" HorizontalAlignment="Left" Margin="193,104,0,0" VerticalAlignment="Top" Width="67" KeyboardNavigation.TabIndex="3"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" Click="btnCancelar_Click" HorizontalAlignment="Left" Margin="475,50.658,0,0" VerticalAlignment="Top" Width="89" Height="25" KeyboardNavigation.TabIndex="6" Grid.Row="1"/>
+
+    </Grid>
+</Window>
